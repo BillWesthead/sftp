@@ -1,0 +1,10 @@
+sftp:
+  container_name: vc_sftp_1
+  image: billwesthead/vc_sftp
+  volumes:
+    - /home/bill/upload:/home/foo/upload
+  ports:
+    - "2273:22"
+
+  # create default user for testing, NB: drop this next line
+  command: foo:pass:1001:1000

@@ -103,3 +103,6 @@ if [ -n "$dir" ]; then
         fi
     done
 fi
+
+# Add user to sftpusers (created in container image) group
+usermod -a -G sftpusers "$user"
